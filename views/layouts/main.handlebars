@@ -31,11 +31,9 @@
             Homepage
           </a>
 
-          {{#if loggedIn }}
           <a class="navbar-item" href="/dashboard">
             Dashboard
           </a>
-          {{/if}}
         </div>
         
         <div class="navbar-end">
@@ -57,16 +55,14 @@
   </header>
   <main>
     <section class="section main-section">
-      <div class="box main-box">
         {{{ body }}}
-      </div>
     </section>
       
   </main>
   </div>
   
   {{#if loggedIn}}
-  <script type="text/javascript" src="javascript/all.js' %}"></script>
+  <script type="text/javascript" src="javascript/all.js"></script>
   <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>
