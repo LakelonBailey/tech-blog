@@ -20,24 +20,24 @@
     </form>
   </section>
 </div>
-<div class="box post-box">
-  {{#if posts.length}}
-  <section>
-    <h2 class="title is-size-4">Your Posts</h2>
-    <ol class="post-list">
-      {{#each posts as |post|}}
-      <li>
-        <article class="post"> 
-          {{> post-info post}}
-          <a href="/dashboard/edit/{{post.id}}">Edit</a>
-        </article>
-      </li>
-      {{/each}}
-    </ol>
-  </section>
-  {{/if}}
+{{#if posts.length}}
+  <div class="box post-box">
+    <section>
+      <h2 class="title is-size-4">Your Posts</h2>
+      <ol class="post-list">
+        {{#each posts as |post|}}
+        <li>
+          <article class="post"> 
+            {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}">Edit</a>
+          </article>
+        </li>
+        {{/each}}
+      </ol>
+    </section>
 
-</div>
+  </div>
+{{/if}}
 </div>
 
 <script src="/javascript/add-post.js"></script>

@@ -1,0 +1,26 @@
+<div class="box single-post-box">
+    <article class="post">
+    {{> post-info post}}
+  </article>
+
+  {{#if loggedIn}}
+  <form class="comment-form">
+    <div class="field">
+      <label class="label">Add Comment</label>
+      <div class="control">
+        <textarea name="comment-body" class="textarea is-small" required=""></textarea>
+      </div>
+    </div>
+
+    <div class="control">
+      <button type="submit" class="button is-small">submit</button>
+    </div>
+  </form>
+  {{/if}}
+    {{> comments post.comments}}
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+{{/if}}

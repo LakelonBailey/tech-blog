@@ -6,14 +6,17 @@
 .auth-btn {
     width: 100%;
 }
-
+.navbar {
+    box-shadow: 0 0 2.5px rgba(0, 0, 0, .5);
+}
 .login-box, .signup-box {
     padding: 8px;
     margin: 12px 0;
     border: 2px solid lightgray;
     border-radius: 10px;
 }
-.dashboard {
+.dashboard, .single-post-box {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -34,4 +37,12 @@
 }
 .post-list {
     list-style-type: none;
+}
+.comment {
+    padding: 4px;
+    height: fit-content;
+    border-top: 1px solid black;
+}
+.comment-text {
+    margin-left: 8px;
 }
