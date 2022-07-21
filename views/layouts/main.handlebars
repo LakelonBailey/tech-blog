@@ -4,34 +4,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
+  <title>Tech Blog</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/bulma.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/all.css' %}">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Just Tech News</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <h1 class="title is-size-2">Tech Blog</h1>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Homepage
+          </a>
+
+          {{#if loggedIn }}
+          <a class="navbar-item">
+            Dashboard
+          </a>
+          {{/if}}
+        </div>
+        
+        <div class="navbar-end">
+          <div class="navbar-item">
+            {{#if loggedIn}} 
+              <button class="button is-light" id="logout">
+                Sign out
+              </button>
+            {{else}}
+            <a href="/login" class="button is-success">Sign in</a>
+            {{/if}}
+          </div>
+        </div>
+        
+
+      </div>
+    </nav>
+        
+  </header>
+  <main>
       {{{ body }}}
-    </main>
+  </main>
     <footer>
       Thanks for visiting!
     </footer>
   </div>
   
   {{#if loggedIn}}
+  <script type="text/javascript" src="javascript/all.js' %}"></script>
   <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>
