@@ -1,0 +1,18 @@
+.main-box {
+    width: fit-content;
+}
+.main-section {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+.auth-btn {
+    width: 100%;
+}
+
+.login-box, .signup-box {
+    padding: 8px;
+    margin: 12px 0;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}

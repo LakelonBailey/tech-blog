@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html has-background-grey-lighter">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/bulma.min.css' %}">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/all.css' %}">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/all.css">
 </head>
 
 <body>
@@ -27,12 +27,12 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">
+          <a class="navbar-item" href="/">
             Homepage
           </a>
 
           {{#if loggedIn }}
-          <a class="navbar-item">
+          <a class="navbar-item" href="/dashboard">
             Dashboard
           </a>
           {{/if}}
@@ -56,11 +56,13 @@
         
   </header>
   <main>
-      {{{ body }}}
+    <section class="section main-section">
+      <div class="box main-box">
+        {{{ body }}}
+      </div>
+    </section>
+      
   </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
   </div>
   
   {{#if loggedIn}}
