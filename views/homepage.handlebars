@@ -2,14 +2,20 @@
 <div class="homepage">
   <div class="box">
   <ol class="post-list">
-    {{#each posts as |post|}}
+    {{#if posts.length}}
+      {{#each posts as |post|}}
+      <li>
+        <article class="post">
+          {{> post-info post }}
+          <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>      
+        </article>
+      </li>
+      {{/each}}
+    {{else}}
     <li>
-      <article class="post">
-        {{> post-info post }}
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>      
-      </article>
+      <p>No Posts Yet</p>
     </li>
-    {{/each}}
+    {{/if}}
   </ol>
 </div>
 </div>
