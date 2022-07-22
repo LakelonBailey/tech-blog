@@ -6,7 +6,7 @@
     <li>
       <article class="post">
         {{> post-info post }}
-        <a href="/post/{{post.id}}">Comment(s)</a>
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>      
       </article>
     </li>
     {{/each}}

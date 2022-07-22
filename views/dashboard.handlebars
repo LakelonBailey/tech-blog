@@ -29,7 +29,7 @@
         <li>
           <article class="post"> 
             {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}">Edit</a>
+            <p><span><a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></span> - <span><a href="/dashboard/edit/{{post.id}}">Edit</a></span></p>
           </article>
         </li>
         {{/each}}
