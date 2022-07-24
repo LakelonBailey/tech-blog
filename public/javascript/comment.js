@@ -1,3 +1,4 @@
+// sends a request to add a new comment
 async function commentFormHandler(event) {
   event.preventDefault();
 

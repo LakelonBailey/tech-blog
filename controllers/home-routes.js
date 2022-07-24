@@ -2,6 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment} = require('../models');
 
+
 // get all posts for homepage
 router.get('/', (req, res) => {
   console.log('======================');
@@ -40,6 +41,7 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 // get single post
 router.get('/post/:id', (req, res) => {
@@ -87,6 +89,8 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+
+// renders the login page
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');

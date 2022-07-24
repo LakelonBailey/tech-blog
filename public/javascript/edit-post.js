@@ -1,3 +1,4 @@
+// sends a request to edit a post
 async function editFormHandler(event) {
   event.preventDefault();
 
