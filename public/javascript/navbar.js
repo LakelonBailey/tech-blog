@@ -1,3 +1,4 @@
+// adds navbar menu dropdown functionality
 document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements

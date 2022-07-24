@@ -1,3 +1,4 @@
+// sends a request to add a new post
 async function newFormHandler(event) {
   event.preventDefault();
 

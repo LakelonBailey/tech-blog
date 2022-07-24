@@ -1,3 +1,4 @@
+// sends a request to log in a user
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -22,6 +23,8 @@ async function loginFormHandler(event) {
   }
 }
 
+
+// sends a request to sign up a user
 async function signupFormHandler(event) {
   event.preventDefault();
 

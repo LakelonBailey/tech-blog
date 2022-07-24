@@ -4,6 +4,7 @@ require('dotenv').config();
 
 let sequelize;
 
+// Checks for the presence of the database server before using the local connection
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
